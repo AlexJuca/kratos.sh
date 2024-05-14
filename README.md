@@ -60,4 +60,12 @@ Kratos currently supports the following providers:
 ```
 
 This command lists the available providers in Kratos. You can use `kratos use <provider>` to switch to a different provider.
+
+
+#### How to purchase a Kratos license?
+Purchase a license key to activate kratos via [gumroad](https://alexandrejucahk23.gumroad.com/l/kratos?_gl=1*1aq2cok*_ga*ODU5MjgyODQxLjE3MTU3MjYyOTY.*_ga_6LJN6D94N6*MTcxNTcyNjI5NS4xLjEuMTcxNTcyNjMyMS4wLjAuMA..)
+To register the license key, run this command:
+
+```shell
+kratos register
 ```
