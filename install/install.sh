@@ -12,6 +12,12 @@ DOWNLOAD_URL="https://github.com/AlexJuca/kratos.sh/releases/download/v0.1.0/kra
 # Define the installation directory
 INSTALL_DIR="$HOME/bin"
 
+# Check if Kratos is already installed
+if command -v kratos &>/dev/null; then
+    echo "Kratos is already installed. Exiting."
+    exit 0
+fi
+
 # Check if curl is installed
 if ! command -v curl &>/dev/null; then
     echo "Error: curl is required but not installed. Please install curl and try again."
