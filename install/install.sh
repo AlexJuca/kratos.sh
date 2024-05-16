@@ -6,9 +6,6 @@ if [[ $(uname -s) != "Darwin" ]]; then
     exit 1
 fi
 
-# Define the URL of the compressed binary
-DOWNLOAD_URL="https://github.com/AlexJuca/kratos.sh/releases/download/v0.1.0/kratos-0.1.0.tar.gz"
-
 # Define the installation directory
 INSTALL_DIR="$HOME/bin"
 
@@ -22,6 +19,14 @@ fi
 if ! command -v curl &>/dev/null; then
     echo "Error: curl is required but not installed. Please install curl and try again."
     exit 1
+fi
+
+# Determine the system architecture (x86_64 or ARM)
+ARCH=$(uname -m)
+if [[ "$ARCH" == "x86_64" ]]; then
+    DOWNLOAD_URL="https://github.com/AlexJuca/kratos.sh/releases/download/v0.1.0/kratos-0.1.0-x86-64-apple-darwin.tar.gz"
+else
+    DOWNLOAD_URL="https://github.com/AlexJuca/kratos.sh/releases/download/v0.1.0/kratos-0.1.0.tar.gz"
 fi
 
 # Create the installation directory if it doesn't exist
